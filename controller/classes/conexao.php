@@ -8,7 +8,7 @@
             if(!isset(self::$conexao)){
 
                 try{
-                    self::$conexao = new PDO("mysql:host=localhost; dbname=projetointegrado", "admcooptar", "12345");
+                    self::$conexao = new PDO("mysql:host=localhost; dbname=projetoPGP", "admcooptar", "12345");
                 }
 
                 catch(PDOException $e){

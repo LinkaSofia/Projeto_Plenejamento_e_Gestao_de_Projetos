@@ -16,6 +16,6 @@ CREATE TABLE usuario(
   PRIMARY KEY (nomeLogin)
 );
 
-create table animal(
+create table Mercado(
   IdProduto INTEGER AUTO_INCREMENT PRIMARY KEY,
   Produto VARCHAR(30) NOT NULL);

@@ -1,38 +1,34 @@
 <?php
-include_once "../controller/classes/AnimalDAO.php";
+include_once "../controller/classes/MercadoDAO.php";
 if(!isset($_GET['acao'])){
-    $obj = new AnimalDAO();
+    $obj = new MercadoDAO();
     $lista = $obj->listar();
-    include "views/listaAnimal.php";
+    include "views/listaMercado.php";
 }
 else {    
 	switch($_GET['acao']){
         case 'adiciona':
             if(!isset($_POST['adiciona'])){ 
-                include "views/cadastraAnimal.php";              
+                include "views/cadastraMercad.php";              
             }
             else{
-                $obj = new Animal();
-                $obj->setCodAnimal($_POST['field_codAnimal']);
-                $obj->setDtNascimento($_POST['field_dtNascimento']);
-                $obj->setCodMae($_POST['field_codMae']);
-                $obj->setNomePai($_POST['field_nomePai']);
-                $obj->setEstadoVida($_POST['field_estadoVida']);
-                $obj->setNomeImagem($_FILES['field_imagem']['name']);
+                $obj = new Mercado();
+                $obj->setProduto($_POST['field_produto']);
+              
                 $erros = $obj->validate();
                 if(count($erros) != 0){ 
-                    include "views/cadastraAnimal.php";                       
+                    include "views/cadastraMercado.php";                       
                 }
                 else{ 
                     $destino = "../img/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
-                        $bd = new AnimalDAO();
+                        $bd = new MercadoDAO();
                         if($bd->inserir($obj))
-                            header("Location: animalController.php"); 
+                            header("Location: mercadoController.php"); 
                     }
                     else{
                         $erros[] = "Erro no upload";
-                        include "views/cadastraAnimal.php";                      
+                        include "views/cadastraMercado.php";                      
                     }
                 
                 }
@@ -41,43 +37,36 @@ else {
         
         case 'altera':
             if(!isset($_POST['altera'])){ 
-                $obj = new AnimalDAO();
-                $animal = $obj->buscar($_GET['codAnimal']);
-                include "views/alteraAnimal.php";
+                $obj = new MercadoAO();
+                $mercado = $obj->buscar($_GET['produto']);
+                include "views/alteraMercado.php";
             }
             else{ 
-                $obj = new Animal();
-                $obj->setCodAnimal($_POST['field_codAnimal']);
-                $obj->setDtNascimento($_POST['field_dtNascimento']);
-                $obj->setCodMae($_POST['field_codMae']);
-                $obj->setNomePai($_POST['field_nomePai']);
-                $obj->setEstadoVida($_POST['field_estadoVida']);
-                $obj->setMotivoMorte($_POST['field_motivoMorte']);
-                $obj->setDataMorte($_POST['field_dataMorte']);
-                $obj->setNomeImagem($_FILES['field_imagem']['name']);
+                $obj = new Mercado();
+                $obj->setproduto($_POST['field_produto']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
-                    include "views/alteraAnimal.php";                      
+                    include "views/alteraMercado.php";                      
                 }
                 else{ 
                     $destino = "../img/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
-                        $bd = new AnimalDAO();
+                        $bd = new MercadoDAO();
                         if($bd->alterar($obj))
-                            header("Location: animalController.php"); 
+                            header("Location: mercadoController.php"); 
                     }
                     else{
                         $erros[] = "Erro no upload";
-                        include "views/cadastraAnimal.php";                        
+                        include "views/cadastraMercado.php";                        
                     }
                 }
             }
             break;
 
         case 'exclui':
-            $bd = new AnimalDAO();
-            if($bd->excluir($_GET['codAnimal']))
-                header("Location: animalController.php"); 
+            $bd = new MercadoDAO();
+            if($bd->excluir($_GET['produto']))
+                header("Location: mercadoController.php"); 
             break;
         
         default:

@@ -2,39 +2,155 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta charset="UTF-8">
     <meta name="author" content="Antonielli, Linka e Pedro">
-    <meta name="description" content="Cooptar - cooperativa de produção agropecuária">
-    <meta name="keywords" content="mst, cooperativa, pontão, agropecuária, bovino">
-    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/adicionar-animal.css" rel="stylesheet">-->
-    <!-- <link href="../css/lista-animais.css" rel="stylesheet">
-    <link href="../css/graficos.css" rel="stylesheet">
-    <link href="../css/relatorios.css" rel="stylesheet">
-    <link href="../css/previsoes.css" rel="stylesheet">
-    <link href="../css/configuracoes.css" rel="stylesheet">
-    <link href="../../css/login.css" rel="stylesheet">-->
-    <title>Assistente</title>
+    <title>Assistente</title>-->
+            <style>
+                .circulo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            float: left;
+            margin: 15px;
+            transition: 0.3s ease;
+        }
+
+        .circulo:hover{
+            transform: rotateY(180deg);
+        }
+
+        .circulo-pequeno {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 10px;
+            float: left;
+            animation: circulo 1s linear infinite;
+        }
+
+        .circulo-pequeno.lime {
+            animation: circulo-inverno 1s linear infinite;
+        }
+
+        @keyframes circulo {
+            from {
+                transform: rotate(0deg) translateX(30px);
+            } to {
+                transform: rotate(360deg) translateX(30px);
+            }
+        }
+
+        @keyframes circulo-inverno {
+            from {
+                transform: rotate(0deg) translateX(30px);
+            } to {
+                transform: rotate(-360deg) translateX(30px);
+            }
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .lime {
+            background: springgreen;
+        }
+
+        .tomato {
+            background: tomato;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: 20px auto;
+        }
+
+        .container::after, .container::before {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 50px 0;
+            font-family: monaco;
+            color: #693BB6;
+            font-weight: 80;
+        }
+
+        h2 {
+            margin-bottom: 100px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px;
+        }
+
+        #origamid {
+            font-family: monaco;
+            text-decoration: none;
+            color: #693BB6;
+            display: inline-block;
+        }
+
+        #origamid::after, #origamid::before {
+            content: '';
+            display: block;
+            background: #693BB6;
+            width: 0;
+            height: 2px;
+            border-radius: 4px;
+            margin: 6px auto 6px auto;
+            transition: all .2s ease;
+        }
+
+        #origamid:hover::after, #origamid:hover::before {
+            width: 100%;
+        }
+
+    </style>
 </head>
 
 <body>
 
     <header>
-        <input type="checkbox" id="check" onclick="MeuBotaoMenu()">
+       <!--<input type="checkbox" id="check" onclick="MeuBotaoMenu()">
         <label for="check" class="checkbtn">&#9776;</label>
         <ul id="PrecisoParajs">
-            <li><a href="../controller/mercadoController.php">Animais</a></li>
-            <!--<li><a href="../controller/animalController.php?acao=adiciona">+  Animal</a></li>
-            <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
-            <li><a href="../controller/inseminacaoController.php?acao=adiciona">+  Inseminação</a></li>
-            <li><a href="../controller/tratamentoController.php?acao=adiciona">+  Tratamento</a></li>-->
+            <li><a href="../controller/mercadoController.php">+Mercado</a></li>
+            <li><a href="../controller/saudeController">+  Saude</a></li>
+            <li><a href="../controller/agendaController">+  Agenda</a></li>
         </ul>
         <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a>
     </header>
 
 <script src="../js/header.js"></script>
-</body>
+</body>-->
+
+<h1>Assistente Pessoal</h1>
+
+<section class="container">
+
+    <div class="circulo lime"><h1>MERCADO</h1></div>
+    <div class="circulo blue"><h1>SAÚDE</h1></div>
+    
+	<div class="circulo">
+        <h1>SAÚDE</h1>
+		<img src="https://source.unsplash.com/random/152x152/"/>
+	</div>
+	</div>
+	<div class="circulo">
+        <h1>AGENDA</h1>
+		<img src="https://source.unsplash.com/random/154x154/"/>
+	</div>
+
+</section>
+

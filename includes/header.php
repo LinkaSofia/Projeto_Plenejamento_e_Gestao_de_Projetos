@@ -138,19 +138,9 @@
 <h1>Assistente Pessoal</h1>
 
 <section class="container">
-
-    <div class="circulo lime"><h1>MERCADO</h1></div>
-    <div class="circulo blue"><h1>SAÚDE</h1></div>
     
-	<div class="circulo">
-        <h1>SAÚDE</h1>
-		<img src="https://source.unsplash.com/random/152x152/"/>
-	</div>
-	</div>
-	<div class="circulo">
-        <h1>AGENDA</h1>
-		<img src="https://source.unsplash.com/random/154x154/"/>
-	</div>
-
+    <li class="circulo lime"><a href="../views/compras.php">Mercado</a></li>
+    <div class="circulo lime"><h1>SAÚDE</h1></div>
+	<div class="circulo lime"><h1>AGENDA</h1></div>
 </section>
 

@@ -139,8 +139,9 @@
 
 <section class="container">
     
-    <li class="circulo lime"><a href="../views/compras.php">Mercado</a></li>
+    <li class="circulo lime"><a href="../controller/compras.php">Mercado</a></li>
     <div class="circulo lime"><h1>SAÚDE</h1></div>
 	<div class="circulo lime"><h1>AGENDA</h1></div>
 </section>
+
 

@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS projetoPGP;
+DROP DATABASE IF EXISTS projetopgp;
 
-CREATE DATABASE projetoPGP DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE projetopgp DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-USE projetoPGP;
+USE projetopgp;
 
 DROP USER IF EXISTS 'admPGP'@'localhost';
 

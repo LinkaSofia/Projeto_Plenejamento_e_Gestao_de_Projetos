@@ -19,3 +19,14 @@ CREATE TABLE usuario(
 create table Mercado(
   IdProduto INTEGER AUTO_INCREMENT PRIMARY KEY,
   Produto VARCHAR(30) NOT NULL);
+  
+  CREATE TABLE Consulta( 
+    idConsulta INTEGER AUTO_INCREMENT PRIMARY KEY, 
+    nomeMedico VARCHAR(40) NOT NULL, 
+    dataConsulta DATETIME NOT NULL, 
+    sintomas VARCHAR(100) NOT NULL);
+    
+    create table Exames( 
+      idExames INTEGER AUTO_INCREMENT PRIMARY KEY, 
+      descricao VARCHAR(100) NOT NULL, 
+      dataExame DATE NOT NULL);

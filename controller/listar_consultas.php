@@ -43,6 +43,8 @@ if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
 					<td>
 						<button type="button" class="btn btn-outline-primary view_data" 
 						<h1><?php echo "<a href='apagar_consulta.php?id=" . $row_atendimento['id'] . "'>Deletar</a><br>"; ?></h1>
+						<button type="button" class="btn btn-outline-primary view_data" 
+						<h1><?php echo "<a href='editar_consulta.php?id=" . $row_atendimento['id'] . "'>Editar</a><br>"; ?></h1>
 					</button></td>	
 				</tr>
 				<?php

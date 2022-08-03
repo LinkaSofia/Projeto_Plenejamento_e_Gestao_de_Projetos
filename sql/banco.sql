@@ -10,17 +10,25 @@ CREATE TABLE usuario(
   PRIMARY KEY (nomeLogin)
 );
 
-create table Mercado(
+CREATE TABLE Mercado(
   IdProduto INTEGER AUTO_INCREMENT PRIMARY KEY,
   Produto VARCHAR(30) NOT NULL);
   
-  CREATE TABLE Consulta( 
-    idConsulta INTEGER AUTO_INCREMENT PRIMARY KEY, 
-    nomeMedico VARCHAR(40) NOT NULL, 
-    dataConsulta DATETIME NOT NULL, 
-    sintomas VARCHAR(100) NOT NULL);
-    
-    create table Exames( 
-      idExames INTEGER AUTO_INCREMENT PRIMARY KEY, 
-      descricao VARCHAR(100) NOT NULL, 
-      dataExame DATE NOT NULL);
+CREATE TABLE Consulta( 
+  idConsulta INTEGER AUTO_INCREMENT PRIMARY KEY, 
+  nomeMedico VARCHAR(40) NOT NULL, 
+  dataConsulta DATETIME NOT NULL, 
+  sintomas VARCHAR(100) NOT NULL);
+
+CREATE TABLE Exames( 
+  idExames INTEGER AUTO_INCREMENT PRIMARY KEY, 
+  descricao VARCHAR(100) NOT NULL, 
+  dataExame DATE NOT NULL);
+
+CREATE TABLE IF NOT EXISTS `events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(220) DEFAULT NULL,
+  `start` datetime DEFAULT NULL,
+  `end` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;

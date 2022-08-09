@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php require_once("headerFull.php");?>
 
 <head>
 	

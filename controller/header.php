@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html class="header">
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto:300');
-html
+html.header
 {
   background: #ecf0f1;
 }
 
-body
+body.header
 {
   margin:0;
   padding:0;
 }
-h1
+h1.header
 {
   font-family: 'Roboto';
   font-weight:100;
@@ -193,7 +193,7 @@ h1
     opacity:1;
   transition-delay:.45s;
 }
-.li a{
+.li a.header{
   left:70%;
 }
 </style>
@@ -211,12 +211,12 @@ h1
     <div class="action_items">
       <span class="first_item">
         <i class="material-icons">
-        <li><a href="../controller/calendario.php"><img src="../img/calendario.png" alt="calendario" width=50 height=40></a></li>
+        <li class="header"><a href="../controller/calendario.php"><img src="../img/calendario.png" alt="calendario" width=50 height=40></a></li>
         </i>
       </span>
       <span class="third_item">
         <i class="material-icons">
-        <li><a href="../controller/compras.php"><img src="../img/compras.png" alt="compras" width=50 height=40></a></li>
+        <li class="header"><a href="../controller/compras.php"><img src="../img/compras.png" alt="compras" width=50 height=40></a></li>
         </i>
       </span>
     </div>

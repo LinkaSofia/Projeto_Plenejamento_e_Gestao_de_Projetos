@@ -1,7 +1,11 @@
 <?php
 session_start();
 ?>
+<?php require_once("headerFull.php");?>
 <!DOCTYPE html>
+<form>
+<input type="button" value="Voltar" onClick="JavaScript: window.history.back();">
+</form>
 <html>
     <head>
         <meta charset='utf-8' />
@@ -19,6 +23,7 @@ session_start();
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="../js/personalizado.js"></script>
     </head>
+    
     <body>
         <?php
         if (isset($_SESSION['msg'])) {

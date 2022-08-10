@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-<?php require_once("headerFull.php");?>
 <!DOCTYPE html>
 <form>
 <input type="button" value="Voltar" onClick="JavaScript: window.history.back();">

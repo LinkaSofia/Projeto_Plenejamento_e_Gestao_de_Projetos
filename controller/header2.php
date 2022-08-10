@@ -12,9 +12,11 @@
 <div class="overlay-navigation">
   <nav role="navigation">
     <ul>
-      <li><a href="calendario.php" data-content="Organização">Calendario</a></li>
+      <li><a href="calendario.php" data-content="Organização">Agenda</a></li>
       <li><a href="compras.php" data-content="Facilidade">Mercado</a></li>
       <li><a href="saude.php" data-content="Auto Cuidado">Saude</a></li>
+      <li><a href="" data-content="Otimização">Tarefas</a></li>
+      <li><a href="" data-content="Facilidade">Mercado</a></li>
     </ul>
   </nav>
 </div>

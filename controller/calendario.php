@@ -1,10 +1,13 @@
 <?php
 session_start();
 ?>
+<!--**
+ * @author Cesar Szpak - Celke - cesar@celke.com.br
+ * @pagina desenvolvida usando FullCalendar e Bootstrap 4,
+ * o código é aberto e o uso é free, 
+ * porém lembre-se de conceder os créditos ao desenvolvedor.
+ *-->
 <!DOCTYPE html>
-<form>
-<input type="button" value="Voltar" onClick="JavaScript: window.history.back();">
-</form>
 <html>
     <head>
         <meta charset='utf-8' />
@@ -22,7 +25,6 @@ session_start();
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="../js/personalizado.js"></script>
     </head>
-    
     <body>
         <?php
         if (isset($_SESSION['msg'])) {
@@ -70,6 +72,18 @@ session_start();
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Color</label>
+                                    <div class="col-sm-10">
+                                        <select name="color" class="form-control" id="color">
+                                            <option value="">Selecione</option>			
+                                            <option style="color:#FFD700;" value="#FFD700">Reunião</option>
+                                            <option style="color:#0071c5;" value="#0071c5">Compromisso</option>
+                                            <option style="color:#FF4500;" value="#FF4500">Evento</option>
+                                            <option style="color:#228B22;" value="#228B22">Consulta / Exame</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Início do evento</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="start" class="form-control" id="start" onkeypress="DataHora(event, this)">
@@ -111,6 +125,18 @@ session_start();
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
                                     <input type="text" name="title" class="form-control" id="title" placeholder="Título do evento">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Color</label>
+                                <div class="col-sm-10">
+                                    <select name="color" class="form-control" id="color">
+                                        <option value="">Selecione</option>			
+                                            <option style="color:#FFD700;" value="#FFD700">Reunião</option>
+                                            <option style="color:#0071c5;" value="#0071c5">Compromisso</option>
+                                            <option style="color:#FF4500;" value="#FF4500">Evento</option>
+                                            <option style="color:#228B22;" value="#228B22">Consulta / Exame</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">

@@ -12,10 +12,11 @@ $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
 $data_end = str_replace('/', '-', $dados['end']);
 $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
 
-$query_event = "INSERT INTO events (title, start, end) VALUES (:title, :start, :end)";
+$query_event = "INSERT INTO events (title, color, start, end) VALUES (:title, :color, :start, :end)";
 
 $insert_event = $conn->prepare($query_event);
 $insert_event->bindParam(':title', $dados['title']);
+$insert_event->bindParam(':color', $dados['color']);
 $insert_event->bindParam(':start', $data_start_conv);
 $insert_event->bindParam(':end', $data_end_conv);
 

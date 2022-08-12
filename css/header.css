@@ -1,13 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+
 body {
   background-color: #fff
 }
 
 .home {
+  margin: 0;
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url(https://images.unsplash.com/photo-1446771326090-d910bfaf00f6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=9216e1a8598a8530ce329b41a8f3725d);
+  background-image: url(https://static.wixstatic.com/media/1aaeb7_52c2bbd023f04ee894aeb10387e630d0~mv2.jpg/v1/fill/w_1000,h_657,al_c,q_90,usm_0.66_1.00_0.01/1aaeb7_52c2bbd023f04ee894aeb10387e630d0~mv2.jpg);
   background-size: cover;
   background-position: center center;
 }

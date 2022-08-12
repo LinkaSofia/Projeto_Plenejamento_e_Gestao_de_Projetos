@@ -16,14 +16,50 @@
         line-height: 1;
     }
 
-/* Nav */
+.contentCompra{
+    max-width: 400px;
+    max-height: 600px;
+    margin-top: 50px;
+    margin-left: 630px;
+    background: #f3f3f3;
+    height: 450px;
+    padding: 2%;
+    border:0.5px solid grey;
+}
+.contentCompra h1{
+    text-align: center;
 
+}
+input[type=text]{
+    width: 80%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.espaco{
+    float: right;
+}
+
+.Lista{
+    color: #ee6e73;
+}
+
+    /* Nav */
+
+
+.ulNav{
+    text-align: right;
+    margin-right: 50px;
+}
+
+.img{
+    margin-top: 5px;
+}
 
 .tab{
     width: auto;
     margin: 0 auto;
     padding: 0 20px 200px 20px;
-   /* border: 5px solid black;*/
 }
 .tabela{
     border: 1px solid gray;
@@ -37,3 +73,246 @@
     text-align: center;
     font-size: 20px;
 }
+
+
+.transparent{
+    background-color:transparent !important
+}
+.transparent-text{
+    color:transparent !important
+}
+html{
+    font-family:sans-serif;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%
+}
+body{
+    margin:0;    
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{
+    display:block
+}
+audio,canvas,progress,video{
+    display:inline-block;
+    vertical-align:baseline
+}
+audio:not([controls]){
+    display:none;
+    height:0
+}
+[hidden],template{
+    display:none
+}
+a{
+    background-color:transparent
+}
+ul:not(.browser-default){
+    padding-left:0;
+    list-style-type:none
+}
+
+.valign-wrapper{
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-align-items:center;
+    -ms-flex-align:center;
+    align-items:center
+}
+.valign-wrapper .valign{
+    display:block
+}
+.clearfix{
+    clear:both
+}
+
+.z-depth-0{
+    box-shadow:none !important
+}
+.z-depth-1,nav,.card-panel,.card,.toast,.btn,.btn-large,.btn-floating,.dropdown-content,.collapsible,.side-nav{
+    box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)
+}
+.z-depth-1-half,.btn:hover,.btn-large:hover,.btn-floating:hover{
+    box-shadow:0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2)
+}
+.z-depth-2{
+    box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3)
+}
+.z-depth-3{
+    box-shadow:0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3)
+}
+.z-depth-4,.modal{
+    box-shadow:0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3)
+}
+.z-depth-5{
+    box-shadow:0 16px 24px 2px rgba(0,0,0,0.14),0 6px 30px 5px rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.3)
+}
+
+.hoverable{
+    transition:box-shadow .25s;
+    box-shadow:0
+}
+
+.hoverable:hover{
+    transition:box-shadow .25s;
+    box-shadow:0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+.divider{
+    height:1px;
+    overflow:hidden;
+    background-color:#e0e0e0
+}
+
+
+table.bordered>thead>tr,table.bordered>tbody>tr{
+    border-bottom:2px solid #d0d0d0
+}
+table.striped>tbody>tr:nth-child(odd){
+    background-color:#f2f2f2
+}
+
+nav{
+    color:#fff;
+    background-color:#ee6e73;
+    width:100%;
+    /*height:56px;
+    line-height:60px;*/
+    /*height:50%;*/
+    height: 56px;
+    /*line-height:60px;*/
+    
+}
+
+nav.nav-extended{
+    height:auto
+}
+nav.nav-extended .nav-wrapper{
+    min-height:56px;
+    height:auto
+}
+nav.nav-extended .nav-content{
+    position:relative;
+    line-height:normal
+}
+nav a{
+    color:#fff
+}
+
+nav i,nav [class^="mdi-"],nav [class*="mdi-"],nav i.material-icons{
+    display:block;
+    font-size:24px;
+    height:56px;
+    line-height:56px
+}
+nav .nav-wrapper{
+    position:relative;
+    height:100%
+}   
+nav .button-collapse{
+    float:left;
+    position:relative;
+    z-index:1;
+    height:56px;
+    margin:0 18px
+}
+nav .button-collapse i{
+    height:56px;
+    line-height:56px
+}
+nav .brand-logo{
+    position:absolute;
+    color:#fff;
+    display:inline-block;
+    font-size:2.1rem;
+    padding:0;
+    white-space:nowrap
+}
+nav .brand-logo.center{
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%)
+}
+@media only screen and (max-width: 992px){
+    nav .brand-logo{
+        left:50%;
+        -webkit-transform:translateX(-50%);
+        transform:translateX(-50%)
+    }
+    nav .brand-logo.left,nav .brand-logo.right{
+        padding:0;
+        -webkit-transform:none;
+        transform:none
+    }
+    nav .brand-logo.left{
+        left:0.5rem
+    }
+    nav .brand-logo.right{
+        right:0.5rem;
+        left:auto
+    }
+}
+nav .brand-logo.right{
+    right:0.5rem;
+    padding:0
+}
+nav .brand-logo i,nav .brand-logo [class^="mdi-"],nav .brand-logo [class*="mdi-"],nav .brand-logo i.material-icons{
+    float:left;
+    margin-right:15px
+}
+nav .nav-title{
+    display:inline-block;
+    font-size:32px;
+    padding:28px 0
+}
+nav ul{
+    margin:0
+}
+nav ul li{
+    transition:background-color .3s;
+    float:left;
+    padding:0
+}
+nav ul li.active{
+    background-color:rgba(0,0,0,0.1)
+}
+nav ul a{
+    transition:background-color .3s;
+    font-size:1rem;
+    color:#fff;
+    display:block;
+    padding:0 15px;
+    cursor:pointer
+}
+nav ul a.btn,nav ul a.btn-large,nav ul a.btn-large,nav ul a.btn-flat,nav ul a.btn-floating{
+    margin-top:-2px;
+    margin-left:15px;
+    margin-right:15px
+}
+nav ul a.btn>.material-icons,nav ul a.btn-large>.material-icons,nav ul a.btn-large>.material-icons,nav ul a.btn-flat>.material-icons,nav ul a.btn-floating>.material-icons{
+    height:inherit;
+    line-height:inherit
+}
+nav ul a:hover{
+    background-color:rgba(0,0,0,0.1)
+}
+nav ul.left{
+    float:left
+}
+nav form{
+    height:100%
+}
+nav .input-field{
+    margin:0;
+    height:100%
+}
+nav .input-field input{
+    height:100%;
+    font-size:1.2rem;
+    border:none;
+    padding-left:2rem
+}
+nav .input-field input:focus,nav .input-field input[type=text]:valid,nav .input-field input[type=password]:valid,nav .input-field input[type=email]:valid,nav .input-field input[type=url]:valid,nav .input-field input[type=date]:valid{
+    border:none;
+    box-shadow:none
+}
+

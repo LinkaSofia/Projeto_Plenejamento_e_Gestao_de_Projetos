@@ -14,16 +14,19 @@ $resultado_usuario = mysqli_query($conn, $result_usuario);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='../css/core/main.min.css' rel='stylesheet' />
     <link href='../css/daygrid/main.min.css' rel='stylesheet' />
-    <link rel="stylesheet" href="../css/novo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/novo.css">
 </head>
 <header>
     <div>
-        <section id="header">
-            <nav id="nav">
-                <ul>
-                    <li><a href="agenda.php">Agenda</a></li>
-                    <li><a href="cadastrofuncionario.php">Cadastros</a></li>
+        <section>
+            <nav>
+                <ul class = "ulNav">
+                    <li class = "img"><a href="index.php"><img src = "../img/home.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="calendario.php"><img src = "../img/calendar.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="compras.php"><img class = "img"  src = "../img/carrinho-de-compras.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="listar_consultas_exames.php"><img class = "img"  src = "../img/saude.png" height="42" width="42"></a></li>
+                    <!--<li><a href="calendario.php">Agenda</a></li>-->
                 </ul>
             </nav>
         </section>

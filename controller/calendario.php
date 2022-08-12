@@ -1,13 +1,8 @@
 <?php
 session_start();
 ?>
-<!--**
- * @author Cesar Szpak - Celke - cesar@celke.com.br
- * @pagina desenvolvida usando FullCalendar e Bootstrap 4,
- * o código é aberto e o uso é free, 
- * porém lembre-se de conceder os créditos ao desenvolvedor.
- *-->
 <!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
         <meta charset='utf-8' />
@@ -15,6 +10,10 @@ session_start();
         <link href='../css/daygrid/main.min.css' rel='stylesheet' />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/personalizado.css">
+        <link href='../css/core/main.min.css' rel='stylesheet' />
+        <link href='../css/daygrid/main.min.css' rel='stylesheet' />
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">-->
+        <link rel="stylesheet" href="../css/novo.css">
 
         <script src='../js/core/main.min.js'></script>
         <script src='../js/interaction/main.min.js'></script>
@@ -25,7 +24,23 @@ session_start();
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="../js/personalizado.js"></script>
     </head>
+    <header>
+    <div>
+        <section>
+            <nav>
+                <ul class = "ulNav">
+                    <li class = "img"><a href="index.php"><img src = "../img/home.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="calendario.php"><img src = "../img/calendar.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="compras.php"><img class = "img"  src = "../img/carrinho-de-compras.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="listar_consultas_exames.php"><img class = "img"  src = "../img/saude.png" height="42" width="42"></a></li>
+                    <!--<li><a href="calendario.php">Agenda</a></li>-->
+                </ul>
+            </nav>
+        </section>
+    </div>
+</header>
     <body>
+    </br></br>
         <?php
         if (isset($_SESSION['msg'])) {
             echo $_SESSION['msg'];
@@ -76,10 +91,14 @@ session_start();
                                     <div class="col-sm-10">
                                         <select name="color" class="form-control" id="color">
                                             <option value="">Selecione</option>			
-                                            <option style="color:#FFD700;" value="#FFD700">Reunião</option>
+                                            <!--<option style="color:#FFD700;" value="#FFD700">Reunião</option>
                                             <option style="color:#0071c5;" value="#0071c5">Compromisso</option>
                                             <option style="color:#FF4500;" value="#FF4500">Evento</option>
-                                            <option style="color:#228B22;" value="#228B22">Consulta / Exame</option>
+                                            <option style="color:#228B22;" value="#228B22">Consulta / Exame</option>-->
+                                            <option style="color:#FDCEA9;" value="#FDCEA9">Reunião</option>
+                                            <option style="color:#EA495F;" value="#EA495F">Compromisso</option>
+                                            <option style="color:#FF4500;" value="#FF4500">Evento</option>
+                                            <option style="color:#F4837D;" value="#F4837D">Consulta / Exame</option>
                                         </select>
                                     </div>
                                 </div>

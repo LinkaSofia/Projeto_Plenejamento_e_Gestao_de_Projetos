@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<?php include_once './header.php' ?>
 <html>
-
 <head>
+	<link rel="stylesheet" href="../css/novo.css">
+</head>
+<header>
+    <div>
+        <section>
+            <nav>
+                <ul class = "ulNav">
+                    <li class = "img"><a href="index.php"><img src = "../img/home.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="calendario.php"><img src = "../img/calendar.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="compras.php"><img class = "img"  src = "../img/carrinho-de-compras.png" height="42" width="42"></a></li>
+                    <li class = "img"><a href="listar_consultas_exames.php"><img class = "img"  src = "../img/saude.png" height="42" width="42"></a></li>
+                    <!--<li><a href="calendario.php">Agenda</a></li>-->
+                </ul>
+            </nav>
+        </section>
+    </div>
+</header>
+<body>
 	
-	<title>Lista de Compras</title>
-
+<!--
 	<style type="text/css">
 		.content{
+			margin-top: 500px;
 			max-width: 400px;
 			max-height: 600px;
 			margin: auto;
@@ -42,47 +58,47 @@
 			width: 25px;
 			padding: 5px;
 		}
-		ul{
+		.ulcompra{
 			list-style-type: none;
 			padding: 10px;
 			height: 250px;
 			background: #fff;
 			overflow-y: auto;
 		}
-		li{
+		.licompra{
 			height: 40px;
 			margin: 15px 0 15px 0;
 			border-bottom: 1px solid;
 
 
 		}
-        li input[type="checkbox"], .multi-column-check input[type="checkbox"] {
+        .licompra input[type="checkbox"], .multi-column-check input[type="checkbox"] {
                 cursor:pointer;margin-right:5px;
             }
-            li.checked {
+            .licompra.checked {
                 background: #e5f8ce url(visto.png) no-repeat 10px center;
                 padding-left:32px;
             }
-            li.checked input[type="checkbox"] {
+            .licompra.checked input[type="checkbox"] {
                 display: none;
             }
-           li.checked:hover input[type="checkbox"] {
+           .licompra.checked:hover input[type="checkbox"] {
                 display: inline !important;
             }
-           li.checked:hover{
+           .licompra.checked:hover{
                 background: #e5f8ce none !important;padding-left:10px;
             }
 
 
 	</style>
-	
-</head>
+		
+</head>-->
 <body>
 <!--name="task" id='task'-->
-	<div class='content'>
+	<div class="contentCompra">
         <div class="row">	
             <form method = "POST" action = "ProcessaMercado.php">
-                <h1> Lista de Compras </h1>
+                <h1 class = "Lista"> Lista de Compras </h1>
                 <form>
                     <input type="text" name="Produto" id='tesk' placeholder="Novo Item..." />
                     <!--<input type="button" name="" 
@@ -97,9 +113,9 @@
             <div class="row">
 				<div class="col-12">
 					<div class="to-do-list-box">
-                    <ul id="myList">	
+                    <ul id="myList ulcompra">	
 						
-						<label>Minha Lista </br></label>
+						<label>Minha Lista </br></label></br>
 					
                         <?php
                         include_once("conexao1.php");
@@ -111,9 +127,9 @@
                         //Verificar se encontrou resultado na tabela "mercado"
                         if(($resultado_lista) AND ($resultado_lista->num_rows != 0)){
                             while($row_lista = mysqli_fetch_assoc($resultado_lista)){
-                                echo $row_lista['Produto'] . "<br>";
+                                echo $row_lista['Produto'];
 								
-								echo "<a href='apagar_lista.php?IdProduto=" . $row_lista['IdProduto'] . "'>Apagar</a><br><hr>";
+								echo "<a class = 'espaco' href='apagar_lista.php?IdProduto=" . $row_lista['IdProduto'] . "'><img src = '../img/excluir.png' height='22' width='22'></a><br><hr>";
 			
                             }
                         }else{

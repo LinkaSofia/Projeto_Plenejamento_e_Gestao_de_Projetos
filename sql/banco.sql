@@ -28,6 +28,7 @@ CREATE TABLE Exames(
 CREATE TABLE IF NOT EXISTS `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(220) DEFAULT NULL,
+  `color` varchar(10) DEFAULT NULL,
   `start` datetime DEFAULT NULL,
   `end` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
